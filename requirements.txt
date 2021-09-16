@@ -1,7 +1,5 @@
 EasyDict==1.7
-imgaug==0.2.6  # add by xp
-# opencv-python==3.4.1.15
-opencv-python==3.4.2.17  #
+opencv-python==3.4.2.17
 shapely==1.6.4
 Cython
 scipy
@@ -11,3 +9,4 @@ json_tricks
 scikit-image
 yacs>=0.1.5
 tensorboardX>=1.6
+imgaug==0.2.6

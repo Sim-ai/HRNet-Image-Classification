@@ -36,7 +36,8 @@ from utils.modelsummary import get_model_summary
 from utils.utils import get_optimizer
 from utils.utils import save_checkpoint
 from utils.utils import create_logger
-from utils.utils import read_split_data
+from utils.utils import read_split_data  # add by xp
+from PIL import Image                    # add by xp
 
 class Hrnet_16bit(Dataset):
     """自定义数据集"""

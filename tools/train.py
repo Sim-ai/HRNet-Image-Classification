@@ -185,13 +185,11 @@ def main():
 #     valdir = os.path.join(config.DATASET.ROOT, config.DATASET.TEST_SET)
 #     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 #                                      std=[0.229, 0.224, 0.225])
-    normalize = transforms.Normalize(mean=[0.5],
-                                     std=[0.5])
-
 
     traindir = '/xiaopeng/data10/train/'
     valdir = '/xiaopeng/data10/val/'
-
+    normalize = transforms.Normalize(mean=[0.5],
+                                     std=[0.5])
     
 #     train_dataset = datasets.ImageFolder(
 #         traindir,

@@ -16,6 +16,7 @@ from pathlib import Path
 
 import torch
 import torch.optim as optim
+import random     # add by xp
 
 def create_logger(cfg, cfg_name, phase='train'):
     root_output_dir = Path(cfg.OUTPUT_DIR)

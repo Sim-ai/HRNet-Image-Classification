@@ -187,8 +187,8 @@ def main():
 #     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 #                                      std=[0.229, 0.224, 0.225])
 
-    traindir = '/xiaopeng/data10/train/'
-    valdir = '/xiaopeng/data10/val/'
+    traindir = '/xiaopeng/Have_done_Dataset/Binary_classification/random_data_single_hf/16bit_train'
+#     valdir = '/xiaopeng/data10/val/'
     normalize = transforms.Normalize(mean=[0.5],
                                      std=[0.5])
     

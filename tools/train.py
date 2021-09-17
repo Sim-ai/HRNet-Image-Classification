@@ -76,7 +76,6 @@ class Hrnet_16bit(Dataset):
         labels = torch.as_tensor(labels)     # 将labels也转化成tensor的形式。
         return images, labels
 
-
 def parse_args():
     parser = argparse.ArgumentParser(description='Train classification network')
     
@@ -182,13 +181,13 @@ def main():
         )
 
     # Data loading code
-#     traindir = os.path.join(config.DATASET.ROOT, config.DATASET.TRAIN_SET)
-#     valdir = os.path.join(config.DATASET.ROOT, config.DATASET.TEST_SET)
+    traindir = os.path.join(config.DATASET.ROOT, config.DATASET.TRAIN_SET)
+    valdir = os.path.join(config.DATASET.ROOT, config.DATASET.TEST_SET)
 #     normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 #                                      std=[0.229, 0.224, 0.225])
 
     traindir = '/xiaopeng/Have_done_Dataset/Binary_classification/random_data_single_hf/16bit_train'
-#     valdir = '/xiaopeng/data10/val/'
+    valdir = '/xiaopeng/Have_done_Dataset/Binary_classification/random_data_single_hf/16bit_test'
     normalize = transforms.Normalize(mean=[0.5],
                                      std=[0.5])
     
@@ -201,7 +200,8 @@ def main():
 #             normalize,
 #         ])
 #     )
-    train_images_path, train_images_label, val_images_path, val_images_label = read_split_data(traindir)
+    train_images_path, train_images_label, _, _ = read_split_data(traindir,0)
+    _, _, val_images_path, val_images_label = read_split_data(traindir,1.0)
     train_dataset = Hrnet_16bit(images_path=train_images_path,
                               images_class=train_images_label,
                               transform=None)

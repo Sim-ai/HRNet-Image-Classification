@@ -65,7 +65,8 @@ CUDNN:
   ENABLED: true
 DATASET:
   DATASET: 'imagenet'
-  DATA_FORMAT: 'jpg'
+#   DATA_FORMAT: 'jpg'
+  DATA_FORMAT: 'tif'
   ROOT: 'data/imagenet/'
   TEST_SET: 'val'
   TRAIN_SET: 'train'

@@ -201,7 +201,7 @@ def main():
 #         ])
 #     )
     train_images_path, train_images_label, _, _ = read_split_data(traindir,0)
-    _, _, val_images_path, val_images_label = read_split_data(traindir,1.0)
+    _, _, val_images_path, val_images_label = read_split_data(valdir,1.0)
     train_dataset = Hrnet_16bit(images_path=train_images_path,
                               images_class=train_images_label,
                               transform=None)
